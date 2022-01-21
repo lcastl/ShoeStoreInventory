@@ -15,23 +15,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
             android:text="@string/user_email"
-            app:layout_constraintBaseline_toBaselineOf="@+id/userEmailText"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/userEmailText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="89dp"
             android:ems="10"
             android:hint="@string/enter_email"
             android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/userPasswordText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:minHeight="48dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/emailLabel"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/userPassword"
@@ -39,50 +38,56 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
             android:text="@string/user_password"
-            app:layout_constraintBaseline_toBaselineOf="@+id/userPasswordText"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailLabel" />
 
         <EditText
             android:id="@+id/userPasswordText"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="520dp"
+            android:height="48dp"
             android:ems="10"
             android:hint="@string/enter_password"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/userPassword"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
             android:id="@+id/loginButton"
             style="@style/buttons"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="112dp"
+            android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="360dp"
+            android:layout_marginBottom="16dp"
             android:background="@color/buttons"
             android:text="@string/login_button"
             android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/newLoginButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/userPasswordText"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userPasswordText" />
 
         <Button
             android:id="@+id/newLoginButton"
             style="@style/buttons"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="256dp"
             android:background="@color/buttons"
             android:paddingLeft="@dimen/padding_wide"
             android:paddingRight="@dimen/padding_wide"
             android:text="@string/new_login_button"
             android:textAllCaps="false"
-            app:layout_constraintBaseline_toBaselineOf="@+id/loginButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
