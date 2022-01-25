@@ -30,6 +30,7 @@
 
         <TextView
             android:id="@+id/instructionsList"
+            style="@style/labels"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -43,6 +44,7 @@
 
         <Button
             android:id="@+id/nextBtn"
+            style="@style/buttons"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
