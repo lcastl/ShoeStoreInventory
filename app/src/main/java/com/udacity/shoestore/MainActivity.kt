@@ -2,6 +2,10 @@ package com.udacity.shoestore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -25,9 +29,11 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
         navController = navHostFragment.navController
         NavigationUI.setupActionBarWithNavController(this, navController)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp()
+        navController = this.findNavController(R.id.myNavHostFragment)
+        return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
 }
