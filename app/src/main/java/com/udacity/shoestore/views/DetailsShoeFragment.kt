@@ -30,10 +30,10 @@ class DetailsShoeFragment : Fragment() {
 
         binding.saveButton.setOnClickListener {view: View ->
             shoeViewModel.addShoe(
-                binding.nameText.text.toString(),
-                binding.companyText.text.toString(),
-                binding.sizeText.text.toString(),
-                binding.descriptionText.text.toString()
+                name = binding.nameText.text.toString(),
+                company = binding.companyText.text.toString(),
+                size = binding.sizeText.text.toString(),
+                description = binding.descriptionText.text.toString()
             )
             view.findNavController().navigate(
                 DetailsShoeFragmentDirections.actionDetailsShoeFragmentToShoeListFragment()
